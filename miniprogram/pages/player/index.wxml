@@ -1,0 +1,17 @@
+<!--pages/player/index.wxml-->
+<import src="../templates/playList/index"/>
+<import src="../templates/blog/index"/>
+<import src="../templates/profile/index"/>
+
+<view class="container">
+    <!-- tab导航栏 -->
+    <!-- scroll-left属性可以控制滚动条位置 -->
+    <!-- scroll-with-animation滚动添加动画过渡 -->
+    <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">        
+        <swiper-item wx:for="{{tabBar}}" wx:for-item="tabItem" wx:for-index="idx" wx:key="idx" class="tab-content">
+               <!-- 页面内容 -->
+           <template is="{{tabItem.name}}"></template>
+        </swiper-item>
+    </swiper>
+    <TabBar list="{{tabBar}}" current="{{currentTab}}" bind:switchTab="switchTab"></TabBar>
+</view>

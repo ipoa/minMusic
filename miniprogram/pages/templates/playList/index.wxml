@@ -1,0 +1,4 @@
+<!--pages/template/playList/index.wxml-->
+<template name="playList">
+  playList
+</template>
