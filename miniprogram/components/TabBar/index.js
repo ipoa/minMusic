@@ -18,9 +18,7 @@ Component({
   methods: {
     switchTab(event) {
       const data = event.currentTarget.dataset
-   //   const url = data.path
-      // wx.switchTab({url})
-      this.triggerEvent("switchTab",{current:data.index})
+      this.triggerEvent("change",{current:data.index})
       this.setData({
         current: data.index
       })

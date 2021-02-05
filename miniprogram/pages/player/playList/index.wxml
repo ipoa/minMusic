@@ -1,0 +1,8 @@
+<!--pages/template/playList/index.wxml-->
+<swiper autoplay="true" indicator-dots="true" interval="2000" class="swiperimg" duration="1500">
+    <block wx:for="{{swiperImgUrls}}" data-index="{{index}}"  wx:key="index">
+      <swiper-item>
+        <image src="{{item.url}}"  class="image" mode="widthFix"></image>
+      </swiper-item>
+    </block>
+  </swiper>

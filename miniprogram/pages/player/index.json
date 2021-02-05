@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "TabBar":"/components/TabBar"
+    "TabBar":"/components/TabBar",
+    "playList":"./playList",
+    "blog":"./blog",
+    "profile":"./profile"
   }
 }

@@ -5,30 +5,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-        tabBar:[
-          {
-            "text": "音乐",
-            "name":"playList",
-            "iconPath": "/images/tabBar/music.png",
-            "selectedIconPath": "/images/tabBar/music-actived.png"
-          },
-          {
-            "text": "发现",
-            "name":"blog",
-            "iconPath": "/images/tabBar/blog.png",
-            "selectedIconPath": "/images/tabBar/blog-actived.png"
-          }
-          ,
-          {
-            "text": "我的",
-            "name":"profile",
-            "iconPath": "/images/tabBar/profile.png",
-            "selectedIconPath": "/images/tabBar/profile-actived.png"
-          }
-        ],
-        currentTab:0
+    currentTab: 0,
+    tabBar: [{
+        "text": "音乐",
+        "iconPath": "/images/tabBar/music.png",
+        "selectedIconPath": "/images/tabBar/music-actived.png",
+      },
+      {
+        "text": "发现",
+        "iconPath": "/images/tabBar/blog.png",
+        "selectedIconPath": "/images/tabBar/blog-actived.png"
+      },
+      {
+        "text": "我的",
+        "iconPath": "/images/tabBar/profile.png",
+        "selectedIconPath": "/images/tabBar/profile-actived.png"
+      }
+    ],
+    swiperImgUrls: [{
+        url: 'http://p1.music.126.net/oeH9rlBAj3UNkhOmfog8Hw==/109951164169407335.jpg',
+      },
+      {
+        url: 'http://p1.music.126.net/xhWAaHI-SIYP8ZMzL9NOqg==/109951164167032995.jpg',
+      },
+      {
+        url: 'http://p1.music.126.net/Yo-FjrJTQ9clkDkuUCTtUg==/109951164169441928.jpg',
+      }
+    ]
   },
-  
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -88,7 +93,7 @@ Page({
   switchTab: function (event) {
     var cur = event.detail.current;
     this.setData({
-        currentTab: cur,
+      currentTab: cur,
     });
-     }
+  }
 })
