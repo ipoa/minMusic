@@ -14,7 +14,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    playingId: -1
+    musicid: -1
   },
 
   /**
@@ -29,9 +29,11 @@ Component({
           }
         }
       } = event
+      const {musicid=-1}=cur.dataset
       this.setData({
-        playingId: cur.dataset.musicid
+        musicid
       })
+      this.triggerEvent('select',{playingId:musicid})
     }
   }
 })

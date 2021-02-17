@@ -1,43 +1,18 @@
-// pages/musicList/index.js
+// miniprogram/pages/player/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    musicList: [],
-    listInfo: {}
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: async function (options) {
-    wx.showLoading({
-      title: '加载中...',
-    })
-    wx.cloud.callFunction({
-      name: 'music',
-      data: {
-        $url: 'musiclist',
-        playListId: options.playListId
-      }
-    }).then(res => {
-      const {
-        tracks: musicList = '',
-        coverImgUrl = '',
-        name = ''
-      } = res.result
-      this.setData({
-        musicList,
-        listInfo: {
-          coverImgUrl,
-          name
-        }
-      })
-      wx.hideLoading()
-    })
-
+  onLoad: function (options) {
+      console.log(options);
   },
 
   /**
@@ -87,13 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  onChooseASong: function (event) {
-    const {
-      playingId = -1
-    } = event.detail
-    wx.navigateTo({
-      url: '../player/index?playingId=' + playingId,
-    })
   }
 })

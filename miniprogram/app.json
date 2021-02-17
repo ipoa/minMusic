@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/musicBox/index",
-    "pages/musicList/index"
+    "pages/musicList/index",
+    "pages/player/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
