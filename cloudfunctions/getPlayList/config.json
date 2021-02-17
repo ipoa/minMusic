@@ -2,6 +2,6 @@
   "triggers": [{
     "name": "getPlayListTrigger",
     "type": "timer",
-    "config": "0 0 0,6,9,12,18 * * * *"
+    "config": "0 0 6,18 * * * *"
   }]
 }
