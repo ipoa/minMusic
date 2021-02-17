@@ -65,7 +65,7 @@
           "query": ""
         },
         {
-          "name": "pages/musicList/index",
+          "name": "musicList",
           "pathName": "pages/musicList/index",
           "query": "playListId=62415410",
           "scene": null
