@@ -1,0 +1,7 @@
+<scroll-view bindscrolltolower="handleScrolltolower" class="playList-wrapper" scroll-y="{{true}}" >
+    <view class="playList-container">
+      <block wx:for="{{playList}}" wx:key="_id">
+        <playList-item data="{{item}}" data-id='{{item.id}}'  bind:tap="goToMusicList"/>
+      </block>
+    </view>
+  </scroll-view>

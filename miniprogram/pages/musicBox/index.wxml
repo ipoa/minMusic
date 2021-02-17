@@ -3,7 +3,7 @@
     <!-- tab导航栏 -->
     <!-- scroll-left属性可以控制滚动条位置 -->
     <!-- scroll-with-animation滚动添加动画过渡 -->
-    <swiper  class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+    <swiper  class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab" >
         <swiper-item class="tab-content">
             <playList swiperImgUrls="{{swiperImgUrls}}"/>
         </swiper-item>

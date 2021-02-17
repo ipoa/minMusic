@@ -1,13 +1,10 @@
-// pages/player/playList/index.js
+// components/PlayList/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    swiperImgUrls:{
-      type:Array,
-      value:[]
-    }
+
   },
 
   /**

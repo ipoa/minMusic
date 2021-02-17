@@ -1,0 +1,11 @@
+<view class='detail-container' style='background: url({{listInfo.coverImgUrl}}) no-repeat  top/cover'></view>
+<view class='detail-mask'></view>
+<view class='detail-info'>
+  <image src="{{listInfo.coverImgUrl}}" class='detail-img'></image>
+  <view class='detail'>
+    <view class='detail-nm'>{{listInfo.name}}</view>
+  </view>
+</view>
+<scroll-view class="musicList-wrapper" scroll-y="true">
+    <x-musicList data="{{musicList}}"/>
+</scroll-view>

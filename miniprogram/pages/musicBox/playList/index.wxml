@@ -1,0 +1,17 @@
+<!--pages/template/playList/index.wxml-->
+<view>
+  <swiper autoplay="true" indicator-dots="true" interval="2000" class="swiperimg" duration="1500">
+    <block wx:for="{{swiperImgUrls}}" data-index="{{index}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.url}}" class="image" mode="widthFix"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <scroll-view bindscrolltolower="handleScrolltolower" class="playList-wrapper" scroll-y="{{true}}" >
+    <view class="playList-container">
+      <block wx:for="{{playList}}" wx:key="_id">
+        <playList-item data="{{item}}" data-id='{{item.id}}'  bind:tap="goToMusicList"/>
+      </block>
+    </view>
+  </scroll-view>
+</view>
