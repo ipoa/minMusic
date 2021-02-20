@@ -36,7 +36,6 @@ Page({
     })
   },
   onPrev: function () {
-    backgroundAudioManager.pause()
     nowPlayIndex--
     if (nowPlayIndex < 0) {
       nowPlayIndex = musiclist.length - 1
@@ -52,15 +51,12 @@ Page({
     this._loadMusicDetail(musiclist[nowPlayIndex].id)
   },
   _loadMusicDetail: function (musicId) {
+    backgroundAudioManager.pause()
     let music = musiclist[nowPlayIndex]
     wx.showLoading({
       title: '加载中...',
     })
-    wx.setNavigationBarTitle({
-      title: music.name,
-    })
     this.setData({
-      picUrl: music.album.picUrl,
       isPlaying: false
     })
     wx.cloud.callFunction({
@@ -72,7 +68,12 @@ Page({
     }).then(res => {
       [songObj] = res.result
       if (!songObj.url) {
-        wx.hideLoading()
+        wx.showToast({
+          icon: 'error',
+          title: '找不到音乐',
+          duration: 2000
+        })
+      
         return false
       }
       backgroundAudioManager.src = songObj.url
@@ -80,7 +81,12 @@ Page({
       backgroundAudioManager.coverImgUrl = music.album.picUrl
       backgroundAudioManager.singer = music.artists[0].name
       backgroundAudioManager.epname = music.album.name
+
+      wx.setNavigationBarTitle({
+        title: music.name,
+      })
       this.setData({
+        picUrl: music.album.picUrl,
         isPlaying: true
       })
       wx.hideLoading()
