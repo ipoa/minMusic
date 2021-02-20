@@ -1,66 +1,89 @@
 // miniprogram/pages/player/index.js
+let musiclist = []
+// 正在播放歌曲的index
+let nowPlayIndex = -1
+let songObj = {}
+const backgroundAudioManager = wx.getBackgroundAudioManager()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    picUrl: '',
+    isPlaying: false // false 暂停,true 播放
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      console.log(options);
+    nowPlayIndex = options.index
+    musiclist = wx.getStorageSync('musiclist')
+
+    this._loadMusicDetail(options.musicid)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 切换播放/暂停
+  togglePlaying: function () {
+    // 正在播放
+    if (this.data.isPlaying) {
+      backgroundAudioManager.pause()
+    } else {
+      backgroundAudioManager.play()
+    }
+    this.setData({
+      isPlaying: !this.data.isPlaying
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  onPrev: function () {
+    backgroundAudioManager.pause()
+    nowPlayIndex--
+    if (nowPlayIndex < 0) {
+      nowPlayIndex = musiclist.length - 1
+    }
+    this._loadMusicDetail(musiclist[nowPlayIndex].id)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  onNext: function () {
+    backgroundAudioManager.pause()
+    nowPlayIndex++
+    if (nowPlayIndex > musiclist.length - 1) {
+      nowPlayIndex = 0
+    }
+    this._loadMusicDetail(musiclist[nowPlayIndex].id)
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  _loadMusicDetail: function (musicId) {
+    let music = musiclist[nowPlayIndex]
+    wx.showLoading({
+      title: '加载中...',
+    })
+    wx.setNavigationBarTitle({
+      title: music.name,
+    })
+    this.setData({
+      picUrl: music.album.picUrl,
+      isPlaying: false
+    })
+    wx.cloud.callFunction({
+      name: 'music',
+      data: {
+        musicId,
+        $url: 'musicUrl'
+      }
+    }).then(res => {
+      [songObj] = res.result
+      if (!songObj.url) {
+        wx.hideLoading()
+        return false
+      }
+      backgroundAudioManager.src = songObj.url
+      backgroundAudioManager.title = music.name
+      backgroundAudioManager.coverImgUrl = music.album.picUrl
+      backgroundAudioManager.singer = music.artists[0].name
+      backgroundAudioManager.epname = music.album.name
+      this.setData({
+        isPlaying: true
+      })
+      wx.hideLoading()
+    })
   }
 })

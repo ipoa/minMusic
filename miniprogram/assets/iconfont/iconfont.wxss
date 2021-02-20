@@ -1,0 +1,33 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1613584237824'); /* IE9 */
+  src: url('iconfont.eot?t=1613584237824#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPcAAsAAAAACIQAAAOQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqEJIM9ATYCJAMUCwwABCAFhG0HRhtHB8guMXbZMEFI1tjpKBdy/rf9aNAGGzgg8fD9fqxz37tfME+QRBND9+kkPEQ8JIgkL31D3FTIqyUwsc5/D9B1sK1vIe5WocYmhAQ1IpRlOMJpnxby/tqv7bm1A94w/azhkjTpl/fFdtl9eKIECImSvBRCZ5iu6QZv7nyhoW49K7B4uHSjnkkU9bUG3Pxf85Iie/F870SmFSID++dLrTAdSDVAgJn5/gPM/vfHvaqZ4vPZt7jMPSgXCocmUID2anEsgkXFWgW9i+zOIC/qbgKDFqiBh6vbeywrWcsCceXaGsvmnFIKkV5oa/ameAVS+vIMPRDzEn5//IcGQaJoKmvt0VZMNv+QOCb8X4c+CmBNp4dwiIpNgCQeao1XEnFwE2xQ+72kXcygXlF+hd+MAJ/d4ejcA4kH7X94hKJKomWlD4NdEkp+hS5C8CtDKPwGCJXfR/aHuU8DBjGET8wXwU8XVKkow9Y5IyMLCUki9vHJ32+R/tX3cw6/jOhZWsXH6/LpUUHNjcX+3o1lYQkSlgN+0MQZij+WwArGT1Ui8w7LShBF4m4ELlB8uoWkh/Udxvf38bxXUpVGL6xu6+c/PITDRkyW68daUV3GtsdnkEhfUA34xZa7Ko+b5lDF05KIPjFv43TMpeOWWzexWBHQ/LhH45oGGBKmAbvacldFa2hMtMJ4l5i3czrm0pjLR7VQvCvk0vY3OXM+MNj/T845NRkUp81TjlT6vFxrc7SsdMPbmX0xesbfnk3MdCrIXD7NTdJawauX0ITaU+PxeIeZIgC+rwuJWIie/4tAsDlXtYeV6e++kOCr60JU9G2C+giwXyYCZv1bFrApdY6lalKtd5mqqbGVUSpa1yD+qHXSaxrxDDid0JtJoejMQ9VbRCd+ExpDtqHV24FBG2yHh0wJS4gcwLoCgjBuDsWon1CNO6AT/4TGrB+0xgOGQcc1zhyyHIH8kkSN0AT9GlyDR5ajoXyUuYP2eaDJLCckHKBUrgf6zXYxsoYRyik2qAt7QGSBJXkIq+h+GAQchOQeGtRxiMRkt7Woe6OOwUOWd0BCGoJMwOkaCDBwEcvvTPKlr9+BbOcCGtnSUKM+gCTFHR0YaOkB6DVhBGq4lYdEXLANRBEL8JK4ELAiPQrsIAeC9bM8yEA6/AP8wiQdaeWFCjvLi8N3PASDrNdpokSNjCZa3V2gXbuRnVTERVJIvEhGeEWMAQ==') format('woff2'),
+  url('iconfont.woff?t=1613584237824') format('woff'),
+  url('iconfont.ttf?t=1613584237824') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1613584237824#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-playing:before {
+  content: "\e624";
+}
+
+.icon-stop:before {
+  content: "\e629";
+}
+
+.icon-prev:before {
+  content: "\e78a";
+}
+
+.icon-next:before {
+  content: "\e7a5";
+}
+

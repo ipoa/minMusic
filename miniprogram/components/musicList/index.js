@@ -29,11 +29,16 @@ Component({
           }
         }
       } = event
-      const {musicid=-1}=cur.dataset
+      const {
+        musicid = -1, index
+      } = cur.dataset
       this.setData({
         musicid
       })
-      this.triggerEvent('select',{playingId:musicid})
+      this.triggerEvent('select', {
+        musicid,
+        index
+      })
     }
   }
 })

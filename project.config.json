@@ -73,7 +73,7 @@
         {
           "name": "player",
           "pathName": "pages/player/index",
-          "query": "playingId=1332573224",
+          "query": "musicid=30064263&index=3",
           "scene": null
         }
       ]

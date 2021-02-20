@@ -8,18 +8,18 @@ Page({
     currentTab: 0,
     tabBar: [{
         "text": "音乐",
-        "iconPath": "/images/tabBar/music.png",
-        "selectedIconPath": "/images/tabBar/music-actived.png",
+        "iconPath": "/assets/images/tabBar/music.png",
+        "selectedIconPath": "/assets/images/tabBar/music-actived.png",
       },
       {
         "text": "发现",
-        "iconPath": "/images/tabBar/blog.png",
-        "selectedIconPath": "/images/tabBar/blog-actived.png"
+        "iconPath": "/assets/images/tabBar/blog.png",
+        "selectedIconPath": "/assets/images/tabBar/blog-actived.png"
       },
       {
         "text": "我的",
-        "iconPath": "/images/tabBar/profile.png",
-        "selectedIconPath": "/images/tabBar/profile-actived.png"
+        "iconPath": "/assets/images/tabBar/profile.png",
+        "selectedIconPath": "/assets/images/tabBar/profile-actived.png"
       }
     ],
     swiperImgUrls: [{
