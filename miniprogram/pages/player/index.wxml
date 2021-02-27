@@ -1,0 +1,12 @@
+<view class="player-container" style="background:url({{picUrl}}) center/cover no-repeat"></view>
+<view class="player-mask"></view>
+<view class="player-info">
+  <view class="player-disc {{isPlaying?'playing':''}}">
+    <image class="player-image rotation {{isPlaying?'':'rotation-paused'}}" src="{{picUrl}}" />
+  </view>
+</view>
+<view class="player-contorl">
+  <text class="iconfont icon-prev" bindtap="onPrev"></text>
+  <text class="iconfont {{isPlaying?'icon-stop,':'icon-playing'}}" bindtap="togglePlaying"></text>
+  <text class="iconfont icon-next" bindtap="onNext"></text>
+</view>

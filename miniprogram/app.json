@@ -1,8 +1,10 @@
 {
   "pages": [
     "pages/musicBox/index",
-    "pages/musicList/index"
+    "pages/musicList/index",
+    "pages/player/index"
   ],
+  "requiredBackgroundModes": ["audio", "location"],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
