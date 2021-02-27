@@ -3,6 +3,7 @@ let musiclist = []
 // 正在播放歌曲的index
 let nowPlayIndex = -1
 let songObj = {}
+// 获取全局唯一的背景音频管理器
 const backgroundAudioManager = wx.getBackgroundAudioManager()
 Page({
 
