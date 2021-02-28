@@ -1,0 +1,33 @@
+.bottom-popup-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.bottom-popup-panel{
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  transition: height .2s ease;
+  z-index: 100;
+}
+
+.bottom-popup-panel.popup-show {
+  height: 300rpx;
+}
+.bottom-popup-panel.popup-show .icon-close{
+  padding: 10rpx;
+  font-size: 40rpx;
+}
+.bottom-popup-panel .icon-close {
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+}

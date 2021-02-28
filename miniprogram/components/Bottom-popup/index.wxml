@@ -1,0 +1,7 @@
+<view class="bottom-popup-container" >
+  <view class="bottom-popup-mask" hidden="{{!popupShow}}" bindtap="onCloseBtn"></view>
+<view class="bottom-popup-panel {{popupShow?'popup-show':''}}">
+  <i class="iconfont icon-close" bindtap="onCloseBtn"></i>
+  <slot hidden="{{!popupShow}}"></slot>
+</view>
+</view>

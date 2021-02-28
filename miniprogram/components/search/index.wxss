@@ -1,4 +1,4 @@
-.container {
+.search-container {
   position: relative;
   align-items: center;
   margin-left: 20rpx;

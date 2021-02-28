@@ -10,9 +10,9 @@ Component({
     }
   },
 
-  externalClasses: [
-    'icon-search'
-  ],
+  options: {
+    styleIsolation: 'apply-shared'
+  },
 
   /**
    * 组件的初始数据
