@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "Bottom-popup": "/components/Bottom-popup/index"
+  }
+}
