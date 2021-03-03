@@ -3,15 +3,15 @@
     <!-- tab导航栏 -->
     <!-- scroll-left属性可以控制滚动条位置 -->
     <!-- scroll-with-animation滚动添加动画过渡 -->
-    <swiper  class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab" >
+    <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
         <swiper-item class="tab-content">
-            <playList swiperImgUrls="{{swiperImgUrls}}"/>
+            <playList swiperImgUrls="{{swiperImgUrls}}" />
         </swiper-item>
         <swiper-item class="tab-content">
-            <blog/>
+            <blog />
         </swiper-item>
         <swiper-item class="tab-content">
-            <profile/>
+            <profile />
         </swiper-item>
     </swiper>
     <TabBar list="{{tabBar}}" current="{{currentTab}}" bindchange="switchTab"></TabBar>
