@@ -2,7 +2,8 @@
   "pages": [
     "pages/musicBox/index",
     "pages/musicList/index",
-    "pages/player/index"
+    "pages/player/index",
+    "pages/blog-edit/index"
   ],
   "requiredBackgroundModes": [
     "audio",
