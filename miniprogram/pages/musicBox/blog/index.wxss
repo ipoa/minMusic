@@ -1,1 +1,43 @@
-/* pages/template/blog/index.wxss */
+.blog-container .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  align-self: center;
+  padding: 0 20rpx;
+  background-color: #fff;
+  height: 100rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header .publish-container {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 68rpx;
+  height: 68rpx;
+}
+
+.iconfont.icon-edit {
+  font-size: 48rpx;
+  line-height: 68rpx;
+}
+
+.iconfont.icon-edit.actived::before {
+  content: "\e6b7";
+}
+
+.blog-container .header .search-container {
+  flex: 1;
+  align-self: center;
+}
+.blog-container .blog-list{
+  padding-top: 120rpx;
+  height: calc( 100vh - 120rpx - 48px - env(safe-area-inset-bottom) );
+}
+.blog-container .blog-panel{
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}

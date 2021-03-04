@@ -1,2 +1,22 @@
-<!--pages/template/blog/index.wxml-->
-blog
+<view class="blog-container">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="publish-container" bindtap="onPublish">
+      <i class="iconfont icon-edit  {{bottomPopupShow?'actived':''}}"></i>
+    </view>
+    <view class="search-container">
+      <Search />
+    </view>
+  </view>
+  <!-- 博客卡片列表 -->
+  <scroll-view class="blog-list" scroll-y="{{true}}">
+    <block wx:for="{{blogList}}" wx:key="_id">
+      <view class="blog-panel">
+        <Blog-card blog="{{item}}" />
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 底部弹出层 -->
+  <Login popupShow="{{bottomPopupShow}}" bindclose="onClosePopupShow" />
+</view>

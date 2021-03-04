@@ -1,4 +1,8 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "Search": "/components/Search/index",
+    "Login": "/components/Login/index",
+    "Blog-card":"/components/Blog-card/index"
+  }
 }
