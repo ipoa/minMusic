@@ -1,0 +1,22 @@
+<view class="container">
+  <textarea class="content" placeholder="分享新鲜事...(最多输入140个字)" maxlength="140" bindinput="onInput" auto-focus
+    show-confirm-bar="{{false}}" bindkeyboardheightchange="onKeyboardheightchange" bindblur="onBlur"></textarea>
+  <view class="image-list">
+    <!-- 显示图片 -->
+    <block wx:for="{{images}}" wx:key="*this">
+      <view class="image-wrap">
+        <image class="image" src="{{item}}" mode="aspectFill" bindtap="onPreVeiwImage" data-image-src="{{item}}"/>
+        <i class="iconfont icon-close" bindtap="onDelPhoto" data-index="{{index}}"></i>
+      </view>
+    </block>
+    <!-- 选择图片 -->
+    <view class="image-wrap select-photo" hidden="{{!selectPhotoShow}}" bindtap="onChooseImage">
+      <i class="iconfont icon-add"></i>
+    </view>
+  </view>
+</view>
+<view class="footer" style="bottom:{{footerBottom}}px">
+  <!-- words-num 输入的文字个数 -->
+  <text class="words-num">{{wordsNum}}</text>
+  <button class="publish-btn" bindtap="onPublishBtn">发布</button>
+</view>
