@@ -1,0 +1,11 @@
+.login-btn{
+  font-size: 32rpx;
+  height: 80rpx;
+  background-color: #d43c33;
+  color: #fff;
+  margin: 80rpx;
+  transition: opacity .3s ease;
+}
+.login-btn:active{
+  opacity: .8;
+}

@@ -8,7 +8,9 @@
 }
 .playList-wrapper{
   margin-top: 10px;
-  height: calc(100vh - 150rpx - 90px);
+  height: calc(100vh - 150rpx - 48px );
+  height: calc(100vh - 150rpx - 48px - constant(safe-area-inset-bottom));
+  height: calc(100vh - 150rpx - 48px - env(safe-area-inset-bottom));
 }
 .playList-container{
   display: flex;
