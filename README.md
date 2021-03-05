@@ -14,7 +14,7 @@
 
 ## 更新日志
 
-- [日志文档](/ipoa/minMusic/blob/master/CHANGELOG.md)
+- [日志文档](./CHANGELOG.md)
 
 ## 后期更新
 
