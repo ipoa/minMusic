@@ -48,8 +48,14 @@ Component({
         wx.hideLoading()
       })
     },
-    goToMusicList(event){
-      const {currentTarget={dataset:{id:0}}}=event
+    goToMusicList(event) {
+      const {
+        currentTarget = {
+          dataset: {
+            id: 0
+          }
+        }
+      } = event
       wx.navigateTo({
         url: `/pages/musicList/index?playListId=${currentTarget.dataset.id}`,
       })

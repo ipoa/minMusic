@@ -1,0 +1,5 @@
+<Bottom-popup popupShow="{{popupShow}}" bindclose="onCloseBottemPopupShow">
+  <view slot="popup-content">
+    <button class="login-btn" open-type="getUserInfo" bindgetuserinfo="onHanderUserInfo">获得微信授权信息</button>
+  </view>
+</Bottom-popup>

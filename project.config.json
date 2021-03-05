@@ -75,6 +75,12 @@
           "pathName": "pages/player/index",
           "query": "musicid=30064263&index=3",
           "scene": null
+        },
+        {
+          "name": "blog-edit",
+          "pathName": "pages/blog-edit/index",
+          "query": "avatarUrl=https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erYZ7FsYibS0Ccsxibsh91TPZpujvXXVadIXEX80ia2XVia6cOtMQvMEJp24Pl03GxZrXTXMndIoJXJLw/132&nickName=neng",
+          "scene": null
         }
       ]
     }

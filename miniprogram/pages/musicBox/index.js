@@ -1,10 +1,12 @@
 // pages/player/index.js
+let current = 0
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    titleText: '',
     currentTab: 0,
     tabBar: [{
         "text": "音乐",
@@ -91,7 +93,14 @@ Page({
   },
 
   switchTab: function (event) {
-    var current = event.detail.current;
+    // 优化响应郊果
+    if (current === event.detail.current) {
+      return null
+    }
+    current = event.detail.current;
+    wx.setNavigationBarTitle({
+      title: this.data.tabBar[current].text,
+    })
     this.setData({
       currentTab: current,
     });

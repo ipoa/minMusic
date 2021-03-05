@@ -40,5 +40,5 @@ page {
 }
 
 .tab-content {
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
