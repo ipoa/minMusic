@@ -8,7 +8,7 @@
   z-index: 100;
 }
 
-.bottom-popup-panel{
+.bottom-popup-panel {
   position: absolute;
   bottom: 0;
   height: 0;
@@ -21,11 +21,15 @@
 
 .bottom-popup-panel.popup-show {
   height: 300rpx;
+  height: calc(300rpx + constant(safe-area-inset-bottom));
+  height: calc(300rpx + env(safe-area-inset-bottom));
 }
-.bottom-popup-panel.popup-show .icon-close{
+
+.bottom-popup-panel.popup-show .icon-close {
   padding: 10rpx;
   font-size: 40rpx;
 }
+
 .bottom-popup-panel .icon-close {
   position: absolute;
   top: 10rpx;
