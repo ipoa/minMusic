@@ -22,7 +22,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    // 预览图片
+    onPreviewImage:(event)=>{
+      wx.previewImage({
+        urls: event.target.dataset.imgs,
+        current:event.target.dataset.imgsrc
+      })
+    }
   },
 
   observers: {
