@@ -122,7 +122,7 @@ Page({
     const promiseArr = await this.uploadFiles('music/blog/', this.data.images)
     // 存入云数据库
     Promise.all(promiseArr).then(fileIDs => {
-      
+
       blogCollection.add({
         data: {
           ...userInfo,
@@ -151,7 +151,7 @@ Page({
 
   uploadFiles: (cloudPath, files) => {
     return new Promise((resolve) => {
-      let resule = []
+      let result = []
       for (let i = 0; i < files.length; i++) {
         let filePath = files[i]
         // 文字扩展名
@@ -169,9 +169,9 @@ Page({
             }
           })
         })
-        resule.push(p)
+        result.push(p)
       }
-      resolve(resule)
+      resolve(result)
     })
   },
 
